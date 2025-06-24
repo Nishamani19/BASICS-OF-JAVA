@@ -1,0 +1,212 @@
+1.
+import java.util.*;
+ import java.util.Scanner;
+ class num
+ {
+     public static void main(String[]args)
+     {
+         Scanner sc = new Scanner (System.in);
+         String a = sc.nextLine();
+         System.out.println("Enter the Name " + a);
+         
+     }
+ }
+
+2.
+import java.util.*;
+ import java.util.Scanner;
+ class num
+ {  public static void main(String[]args)
+     {  Scanner sc = new Scanner (System.in);
+         System.out.println("Enter value for a and b");
+         String a = sc.nextLine();
+         String b = sc.nextLine();
+         System.out.println(b);
+         System.out.println(a);
+         System.out.print(b);
+         System.out.print(a);
+         
+     }
+ }
+
+3. To vote problem for if else condition program.
+import java.util.*;
+ import java.util.Scanner;
+ class num
+ {
+     public static void main(String[]args)
+     {
+        Scanner sc = new Scanner (System.in);
+        int age = 18;
+        int a = sc.nextInt();
+        if(a>=age) // check the age to vote ;if greater than or equal to age value 
+        {
+            System.out.print("To Vote");
+        }
+        else // not egilble to vote because less than age value
+        {
+            System.out.print("To Not Vote");
+        }
+         
+     }
+ }
+
+4.odd or even problem
+
+import java.util.*;
+ import java.util.Scanner;
+ class num
+ {
+     public static void main(String[]args)
+     {
+        Scanner sc = new Scanner (System.in);
+        int a = sc.nextInt();
+        if(a%2==0)
+        {
+            System.out.print("EVEN NUMBER");
+        }
+        else
+        {
+            System.out.print("ODD NUMBER");
+        }
+     }
+ }
+5. Sum of Natural NUmbers 
+
+import java.util.*;
+import java.util.Scanner;
+class main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        int j=0;
+        for(int i=0;i<=n;i++)
+        {
+            j=j+i;
+        }
+        System.out.println("the sum of natural numbers are :"+j);
+    }
+}
+
+6.Print number squence using dowhile loop
+
+import java.util.*;
+import java.util.Scanner;
+class main
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int l=1;
+        do{
+             System.out.println(a++);
+            l++;
+        }
+        while(l<=10);
+       
+    }
+} 
+7.break and continue
+
+import java.util.*;
+import java.util.Scanner;
+class main
+{
+    public static void main(String[]args)
+    {
+        for(int i=1;i<=10;i++)
+        {
+            if(i==5)
+            break;//continue;
+            System.out.println(i);
+        }
+    }
+}
+
+8.Switch Case
+
+import java.util.*;
+import java.util.Scanner;
+class main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int n=0;
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        switch(c){
+            case 1:
+            n=a+b;
+            System.out.println("the sum of numbers are : "+n);
+            break;
+            case 2:
+            n=a-b;
+            System.out.println("the subtraction of numbers are : "+n);
+            break;
+            case 3:
+            n=a*b;
+            System.out.println("the multiplication of numbers are : "+n);
+            break;
+        }
+    }
+}
+
+9.Array basic program to print a string
+
+import java.util.*;
+ import java.util.Scanner;
+ class achu
+ {
+     public static void main(String[]args){
+         Scanner sc = new Scanner(System.in);
+         String [] m = new String [3];
+         m [0] = sc.nextLine();
+         m [1] = sc.nextLine();
+         m [2] = sc.nextLine();
+         System.out.println("enter the m "+m[0]+" "+m[1]+" "+m[2]);
+     }
+ }
+
+10.Array basic program to print a string using for loop
+ import java.util.*;
+ import java.util.Scanner;
+ class achu
+ {
+     public static void main(String[]args){
+         Scanner sc = new Scanner(System.in);
+         String [] m = new String [3];
+         
+        for(int i=0;i<3;i++)
+        {
+             m [i] = sc.nextLine();
+        }
+         
+         for(int i=0;i<3;i++)
+         {
+             System.out.println(m[i]);
+         }
+     }
+ }
+11.Array basic program to print a string using for loop and getting a array size 
+ import java.util.*;
+ import java.util.Scanner;
+ class achu
+ {
+     public static void main(String[]args){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the size of array; ");
+         int a = sc.nextInt();
+         String [] m = new String [a];
+         
+        for(int i=0;i<a;i++)
+        {
+             m [i] = sc.next();
+        }
+         
+         for(int i=0;i<a;i++)
+         {
+             System.out.print(m[i]);
+         }
+     }
+ }

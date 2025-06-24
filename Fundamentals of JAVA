@@ -282,3 +282,67 @@ class Main
         
     }
 }
+13.3D Array getting input from the user
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int[][][] mat = new int[2][2][2];
+        
+        System.out.println("Enter the size of the array:");
+        
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                for(int k=0;k<2;k++)
+                {
+                mat[i][j][k]=sc.nextInt();
+                }
+            }
+        }
+        
+        
+        for(int i=0;i<2;i++)
+        {
+        for(int j=0;j<2;j++)
+        {
+        for(int k=0;k<2;k++)
+        {
+            System.out.print(mat[i][j][k]+" ");
+        }
+        System.out.println();
+        }
+        System.out.println();
+        }
+        
+    }
+}
+14.Array Star Pattern
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int[][] mat = new int[2][2];
+        
+        for(int i=0;i<2;i++)
+        {
+        for(int j=0;j<2;j++)
+        {
+            System.out.print("* ");
+        }
+        System.out.println();
+        }
+        System.out.println();
+        }
+        
+    }
+}

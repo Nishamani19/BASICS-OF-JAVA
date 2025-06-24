@@ -368,5 +368,59 @@ class Main
         System.out.println("Max:"+arr[arr.length-1]);
     }
 }
+
+17.with return type with parameter
+  import java.util.*;
+  class main
+  {
+      static int add(int a,int b){
+          return a + b;
+      }
+      public static void main (String[]args){
+          int sum =add(5,3);
+          System.out.print("Sum of value are "+sum);
+      }
+  }
+
+18. no return type no parameter
+  import java.util.*;
+  class main 
+  {
+      static void main(){
+          int a =79;
+          int b=90;
+          int c=a+b;
+          System.out.print(c);
+      }
+      public static void main (String[]args){
+          main();
+      }
+  }
+
+19. with parameter no return type 
+    import java.util.*;
+  class main 
+  {
+      static void printname(String name){
+          System.out.print("Name: "+name);
+      }
+      public static void main (String[]args){
+      printname("Nakulachu");}
+  }
+
+20.no parameter with return type
+  import java.util.*;
+  class main
+{   
+    static  int number()
+        {
+            return 90;
+        }
+     public static void main (String[]args)
+     {
+         int getnumber=number();
+         System.out.print(getnumber);
+     }
+}
     
     

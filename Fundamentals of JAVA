@@ -508,5 +508,19 @@ class Main
     }
 }
 
+27.Replace the String
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        StringBuffer sb = new StringBuffer("Good Night");
+        sb.replace(5,10,"Morning");
+        System.out.println(sb);
+    }
+}
+
     
     

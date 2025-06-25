@@ -451,6 +451,20 @@ class Main
     }
 }
 
+23.Reverse the String
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        StringBuffer sb =new StringBuffer(input);
+        System.out.println("Reverse the String:"+sb.reverse());
+    }
+}
 
     
     

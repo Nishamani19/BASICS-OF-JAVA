@@ -494,5 +494,19 @@ class Main
     }
 }
 
+26.Delete the string
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        StringBuffer sb = new StringBuffer("Elsa was a Princess");
+        sb.deleteCharAt(5);
+        System.out.println(sb);
+    }
+}
+
     
     

@@ -480,5 +480,19 @@ class Main
     }
 }
 
+25.Insert the String
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        StringBuffer sb = new StringBuffer("Elsa");
+        sb.insert(4,"Princess");
+        System.out.println(sb);
+    }
+}
+
     
     

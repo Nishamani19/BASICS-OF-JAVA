@@ -422,5 +422,20 @@ class Main
          System.out.print(getnumber);
      }
 }
+
+21.String access
+import java.util.*;
+class Main
+{
+    public static void main(String[] args)
+    {
+        String a = "Bhuwanesh";
+        String b = "Sabapathi";
+        String c = "Venkatesh";
+        System.out.println(b);
+    }
+}
+
+
     
     

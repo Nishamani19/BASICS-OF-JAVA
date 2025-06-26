@@ -575,5 +575,35 @@ public static void main(String[]args)
 }
 }
 
+30.Getting from the user in class,objects and method
+import java.util.*;
+import java.util.Scanner;
+
+class Applications
+{ 
+    String a = "";
+    int b = 0;
+    int c = 0;
+
+void display()
+{
+    System.out.println("Name:"+a);
+    System.out.println("Age:"+b);
+    System.out.println("Years of Passing:"+c);
+}
+}
+public class Main
+{
+public static void main(String[]args)
+{
+    Scanner sc = new Scanner(System.in);
+    Applications KSR = new Applications();
+    KSR.a=sc.nextLine();
+    KSR.b=sc.nextInt();
+    KSR.c=sc.nextInt();
+    KSR.display();
+}
+}
+
     
     

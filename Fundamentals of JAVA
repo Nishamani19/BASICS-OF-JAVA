@@ -546,5 +546,34 @@ class Main
     }
 }
 
+29.General class,method and objects
+import java.util.*;
+import java.util.Scanner;
+
+class Applications
+{ 
+    String a = "";
+    int b = 0;
+    int c = 0;
+
+void display()
+{
+    System.out.println("Name:"+a);
+    System.out.println("Age:"+b);
+    System.out.println("Years of Passing:"+c);
+}
+}
+public class Main
+{
+public static void main(String[]args)
+{
+    Applications KSR = new Applications();
+    KSR.a="Nisha";
+    KSR.b=20;
+    KSR.c=2026;
+    KSR.display();
+}
+}
+
     
     

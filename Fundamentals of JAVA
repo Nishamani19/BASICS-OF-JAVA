@@ -641,5 +641,34 @@ public static void main(String[]args)
 }
 }
 
+32.Upper case to Lower case
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        for(int i=0;i<s.length();i++)
+        {
+            char ch=s.charAt(i);
+            
+            if(ch>=65&&ch<=40)
+            {
+                System.out.print(Character.toLowerCase(ch));
+            }
+            else if(ch>=97&&ch<=122)
+            {
+                System.out.println(Character.toUpperCase(ch));
+            }
+            else
+            {
+                System.out.println(ch);
+            }
+        }
+    }
+}
     
     

@@ -770,5 +770,38 @@ public class Main
         a.Elder();
     }
 }
-    
+
+36.Overloading Polymorphism
+import java.util.*;
+import java.util.Scanner;
+
+class Mother
+{
+	void Nisha()
+	{
+		System.out.println("Hello");
+	}
+	void Mithra(String name)
+	{
+		System.out.println("Hi,"+name);
+	}
+	void Daddy(int num)
+	{
+		System.out.println("This is your seat number,Right!"+num);
+	}
+}
+public class Main
+{
+	public static void main(String[] args)
+	{
+	    Scanner sc = new Scanner(System.in);
+	    int num=sc.nextInt();
+	    sc.nextLine();
+	    String name=sc.nextLine();
+	    Mother a = new Mother();
+	    a.Nisha();
+	    a.Mithra(name);
+	    a.Daddy(num);
+	}
+}
     

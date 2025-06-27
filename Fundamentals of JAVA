@@ -670,5 +670,105 @@ class Main
         }
     }
 }
+
+33.Multilevel Inheritance
+import java.util.*;
+import java.util.Scanner;
+
+class Nisha
+{
+    void Elder()
+    {
+    System.out.println("Hello");
+    }
+}
+class Mithra extends Nisha
+{
+    void Sister()
+    {
+    System.out.println("Hii");
+    }
+}
+class Sangeetha extends Mithra 
+{
+    void Mother()
+    {
+    System.out.println("Amma");
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Sangeetha a=new Sangeetha();
+        a.Mother();
+        a.Sister();
+        a.Elder();
+    }
+}
+
+34.Hierarchical Inheritance
+import java.util.*;
+import java.util.Scanner;
+
+class Nisha
+{
+    void Elder()
+    {
+    System.out.println("Hello");
+    }
+}
+class Mithra extends Nisha
+{
+    void Sister()
+    {
+    System.out.println("Hii");
+    }
+}
+class Sangeetha extends Nisha 
+{
+    void Mother()
+    {
+    System.out.println("Amma");
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Sangeetha a=new Sangeetha();
+        a.Mother();
+        //a.Sister();
+        a.Elder();
+    }
+}
+
+35.Single Inheritance
+import java.util.*;
+import java.util.Scanner;
+
+class Nisha
+{
+    void Elder()
+    {
+    System.out.println("Hello");
+    }
+}
+class Mithra extends Nisha
+{
+    void Sister()
+    {
+    System.out.println("Hii");
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Mithra a=new Mithra();
+        a.Sister();
+        a.Elder();
+    }
+}
     
     

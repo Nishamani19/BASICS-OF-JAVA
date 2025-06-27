@@ -831,4 +831,48 @@ class Main
         a.younger();
     }
 }
+
+38.Getter and Setter Method in Encapsulation
+import java.util.*;
+import java.util.Scanner;
+class Nisha
+{
+    private String name = "Mithra";
+    private int pin = 1922;
+    
+    private String user;
+    private int num;
+    
+    public String getname()
+    {
+        return name;
+    }
+    public int getpin()
+    {
+        return pin;
+    }
+    
+    public void setuser(String a)
+    {
+        this.user=a;
+        System.out.println(user);
+    }
+    public void setnum(int b)
+    {
+        num=b;
+        System.out.println(num);
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Nisha object = new Nisha();
+        System.out.println(object.getname());
+        System.out.println(object.getpin());
+        object.setuser("Preethi");
+        object.setnum(2219);
+    }
+}
     

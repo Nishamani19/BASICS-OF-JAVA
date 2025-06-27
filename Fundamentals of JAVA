@@ -804,4 +804,31 @@ public class Main
 	    a.Daddy(num);
 	}
 }
+
+37.Method Overriding
+import java.util.*;
+import java.util.Scanner;
+
+class Nisha
+{
+    void younger()
+    {
+        System.out.println("She is a Elder girl");
+    }
+}
+class Mithra extends Nisha
+{
+    void younger()
+    {
+        System.out.println("She is a Younger Girl");
+    }
+}
+class Main
+{
+    public static void main(String[]args)
+    {
+        Nisha a = new Mithra();
+        a.younger();
+    }
+}
     

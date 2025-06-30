@@ -1085,3 +1085,27 @@ class main
         }
     }
 }
+
+44.Exception Handling(Try,Catch)
+import java.util.*;                              
+
+public class Main
+{
+    public static void main(String[]args)
+    {
+        String[]name={"Nisha","Mithra","Mani","Sangeetha",null};
+        try
+        {
+            System.out.println(name[4]);
+            System.out.println(name[4].length());
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Invalid Index");
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("Null Error");
+        }
+    }
+}

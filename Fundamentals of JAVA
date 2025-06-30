@@ -875,4 +875,39 @@ class Main
         object.setnum(2219);
     }
 }
-    
+
+39.Lowest Element in the Array:
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+	public static void main(String[]args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the vaule:");
+		int n = sc.nextInt();
+
+		if(n<=0)
+		{
+			System.out.print("Invalid Array Size");
+		}
+		System.out.println("Enter the array values:");
+		int []arr = new int[n];
+		for(int i=0; i<n; i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		int min = arr[0];
+		for(int j=0; j<n; j++)
+		{
+			if(arr[j]<min)
+			{
+				min = arr[j];
+			}
+		}
+		System.out.println("The lowest element in the array is:");
+		System.out.println(min);
+	}
+
+}    

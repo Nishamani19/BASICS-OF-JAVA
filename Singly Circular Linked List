@@ -1,0 +1,190 @@
+class Nisha
+{
+	Node head;
+
+	class Node
+	{
+		int data;
+		Node next;
+		Node(int data)
+		{
+			this.data = data;
+		}
+	}
+
+	public void insertAtEnd(int data)
+	{
+		Node newNode = new Node(data);
+		if(head == null)
+		{
+			head = newNode;
+			head.next = head;
+		}
+		else
+		{
+			Node temp = head;
+			while(temp.next != head)
+			{
+				temp = temp.next;
+			}
+			temp.next = newNode;
+			newNode.next = head;
+		}
+	}
+
+	public void insertAtBeginning(int data)
+	{
+		Node newNode = new Node(data);
+		if(head == null)
+		{
+			head = newNode;
+			head.next = head;
+		}
+		else
+		{
+			Node temp = head;
+			while(temp.next != head)
+			{
+				temp = temp.next;
+			}
+			newNode.next = head;
+			temp.next = newNode;
+			head = newNode;
+		}
+	}
+
+	public void insertAtMiddle(int data, int pos)
+	{
+		if(pos <= 1 || head == null)
+		{
+			insertAtBeginning(data);
+			return;
+		}
+
+		Node newNode = new Node(data);
+		Node temp = head;
+
+		int count = 1;
+		while(count < pos -1 && temp.next != head)
+		{
+			temp = temp.next;
+			count++;
+		}
+
+		newNode.next = temp.next;
+		temp.next = newNode;
+	}
+
+	public void deleteAtEnd()
+	{
+		if(head == null)
+			return;
+
+		if(head.next == head)
+		{
+			head = null;
+			return;
+		}
+
+		Node temp = head;
+		while(temp.next.next != head)
+		{
+			temp = temp.next;
+		}
+		temp.next = head;
+	}
+
+	public void deleteAtBeginning()
+	{
+		if(head == null)
+			return;
+
+		if(head.next == head)
+		{
+			head = null;
+			return;
+		}
+
+		Node temp = head;
+		while(temp.next != head)
+		{
+			temp = temp.next;
+		}
+		temp.next = head.next;
+		head = head.next;
+	}
+
+	public void deleteAtMiddle(int pos)
+	{
+		if(head == null)
+			return;
+
+		if(pos <=1)
+		{
+			deleteAtBeginning();
+			return;
+		}
+
+		Node temp = head;
+		int count = 1;
+		while(count < pos -1 && temp.next.next != head)
+		{
+			temp = temp.next;
+			count++;
+		}
+
+		if(temp.next.next == head)
+		{
+			deleteAtEnd();
+		}
+		else
+		{
+			temp.next = temp.next.next;
+		}
+	}
+
+	public void display()
+	{
+		if(head == null)
+		{
+			System.out.println("List is empty.");
+			return;
+		}
+
+		Node temp = head;
+		do
+		{
+			System.out.print(temp.data + " ");
+			temp = temp.next;
+		}
+		while(temp != head);
+
+		System.out.println();
+	}
+}
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Nisha list = new Nisha();
+		list.insertAtEnd(3);
+		list.insertAtEnd(2);
+		list.display();
+
+		list.insertAtBeginning(1);
+		list.display();
+
+		list.insertAtMiddle(4, 2);
+		list.display();
+
+		list.deleteAtEnd();
+		list.display();
+
+		list.deleteAtMiddle(2);
+		list.display();
+
+		list.deleteAtBeginning();
+		list.display();
+	}
+}

@@ -1,0 +1,81 @@
+import java.util.*;
+import java.util.Scanner;
+class Stack
+{
+    int[]StackArray;
+    int top;
+    int capacity;
+    public void Siz(int size)
+    {
+        capacity=size;
+        StackArray= new int[capacity];
+        top=-1;
+    }
+    public void push(int data)
+    {
+        if(top==capacity-1)
+        {
+            System.out.println("Stack overflow");
+            return;
+        }
+        StackArray[++top]=data;
+        System.out.println(data+" pushed to the Stack");
+    }
+    public int pop()
+        {
+            if(isEmpty())
+            {
+                System.out.println("Stack underflow");
+                return -1;
+            }
+            int popped=StackArray[top--];
+            System.out.println(popped+"popped from the stack");
+            return popped;
+        }
+        public int peek()
+        {
+            if(isEmpty())
+            {
+                System.out.println("Stack is empty");
+                return -1;
+            }
+            return StackArray[top];
+        }
+        public boolean isEmpty()
+        {
+            return top == -1;
+        }
+        
+        public void display()
+        {
+            if(isEmpty())
+            {
+                System.out.println("stack is empty");
+                return;
+            }
+            System.out.println("stack top to bottom");
+            for(int i=top;i>=0;i--)
+            {
+                System.out.print(StackArray[i]+" ");
+            }
+            System.out.println();
+        }
+}
+class Main
+{
+    public static void main(String[]args)
+    {
+        Stack list=new Stack();
+        list.Siz(5);
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+        list.display();
+        list.peek();
+        list.display();
+        
+        
+    }
+}

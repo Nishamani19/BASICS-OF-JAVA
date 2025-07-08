@@ -1,0 +1,84 @@
+class QueueArray
+{
+    int size = 5;             
+    int[] arr = new int[size];
+    int front = -1, rear = -1;
+
+    void enqueue(int val)
+    {
+        if (rear == size - 1)
+        {
+            System.out.println("Queue is Full");
+        }
+        else
+        {
+            if (front == -1)
+                front = 0;
+            rear++;
+            arr[rear] = val;
+        }
+    }
+
+    void dequeue()
+    {
+        if (front == -1 || front > rear)
+        {
+            System.out.println("Queue is Empty");
+        }
+        else
+        {
+            System.out.println("Dequeue: " + arr[front]);
+            front++;
+            if (front > rear)
+            {
+                front = rear = -1; // Reset to empty state
+            }
+        }
+    }
+
+    void peek()
+    {
+        if (front == -1 || front > rear)
+        {
+            System.out.println("The queue is empty");
+        }
+        else
+        {
+            System.out.println("Front: " + arr[front]);
+        }
+    }
+
+    void display()
+    {
+        if (front == -1 || front > rear)
+        {
+            System.out.println("The queue is empty");
+        }
+        else
+        {
+            System.out.print("Queue: ");
+            for (int i = front; i <= rear; i++)
+            {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        QueueArray queue = new QueueArray();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        queue.display();
+        queue.peek();
+
+        queue.dequeue();
+        queue.display();
+    }
+}

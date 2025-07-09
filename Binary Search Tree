@@ -1,0 +1,60 @@
+class Node
+{
+    int data;
+    Node left, right;
+
+    Node(int value)
+    {
+        data = value;
+        left = right = null;
+    }
+}
+
+class bst
+{
+    Node root;
+
+    Node insert(Node node, int value)
+    {
+        if (node == null)
+        {
+            return new Node(value);
+        }
+        if (value < node.data)
+        {
+            node.left = insert(node.left, value);
+        }
+        else if (value > node.data)
+        {
+            node.right = insert(node.right, value);
+        }
+        return node;
+    }
+
+    void inorder(Node node)
+    {
+        if (node != null)
+        {
+            inorder(node.left);
+            System.out.println(node.data + " ");
+            inorder(node.right);
+        }
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        bst tree = new bst();
+        int[] values = {50, 30, 20, 40, 70, 60, 80};
+
+        for (int val : values)  
+        {
+            tree.root = tree.insert(tree.root, val);
+        }
+
+        System.out.println("Inorder traversal of BST");
+        tree.inorder(tree.root);
+    }
+}

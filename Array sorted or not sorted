@@ -1,0 +1,36 @@
+import java.util.*;
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b[] = new int[a];
+        int count=0;
+        for(int i=0;i<a;i++)
+        {
+            b[i]=sc.nextInt();
+        }
+        for(int i=0;i<b.length-1;i++)
+        {
+            int c=b[i];
+            int d=b[i+1];
+            int n=d-c;
+            
+            if(n==1)
+            {
+                count++;
+            }
+        }
+        if(count==b.length-1)
+        {
+            System.out.print("sorted");
+        }
+        else
+        {
+            System.out.print("unsorted");
+        }
+    }
+}

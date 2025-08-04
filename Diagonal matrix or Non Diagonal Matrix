@@ -1,0 +1,62 @@
+import java.util.*;
+import java.util.Scanner;
+class Main
+ {
+     public static void main(String[]args){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the size of row: ");
+         int a = sc.nextInt();
+         System.out.print("Enter the size of column: ");
+         int b = sc.nextInt();
+         int [] []m = new int [a][b];
+         
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+              m[i][j]=sc.nextInt();
+            }
+        }
+        
+        System.out.print("Output of the matrix\n");
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+             System.out.print(m[i][j]+" ");  
+            }
+            System.out.println( );
+        }
+        
+        int c=0,d=0;
+        
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+                if(i==j)
+                {
+                    if(m[i][j]>0)
+                    {
+                        c++;
+                    }
+                }
+                else if(i!=j)
+                {
+                    if(m[i][j]>0)
+                    {
+                        d++;
+                    }
+                }
+            }
+        }
+        if(c==a && d==0)
+        {
+            System.out.println("Diagonal");
+        }
+        else{
+            System.out.println("Non Diagonal");
+        }
+
+     }
+ }
